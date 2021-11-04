@@ -1,4 +1,4 @@
-#True Random Number Generator using LCG and using time as the seed
+#Psuedorandom Number Generator using LCG and taking the seed stored inside the text file
 
 from time import sleep
 import sys
@@ -16,17 +16,17 @@ input("Please Press 'Enter' to start the program:\n")
 
 #Variable for requesting the user to press 'Enter' in order to run the program
 
-import time
-#To get system time in seconds 
-seed = time.time()
-num = int(seed)
-print("The system's current time is : ", num)
-#Converting the real time into an integer instead of being a float number
+#Function used to get the number from a text file and storing it
+with open('number.txt') as f:
+    contents = int(f.read())
+num = contents
+#Calling the 'contents' variable as 'num' to make it easier for the user to understand 
+print("Seed stored inside the file is : ", contents )
      
 #Setting the values for each variable
 a = 134775813
 #A is the multiplier
-c = 1 
+c = 1
 #C is the increment 
 m = 2**32
 #M is the modulus

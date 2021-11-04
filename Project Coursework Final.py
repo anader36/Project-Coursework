@@ -1,4 +1,4 @@
-#True Random Number Generator using LCG and using time as the seed
+#Psuedorandom Number Generator using LCG and asking the user to input a number as the seed
 
 from time import sleep
 import sys
@@ -16,15 +16,13 @@ input("Please Press 'Enter' to start the program:\n")
 
 #Variable for requesting the user to press 'Enter' in order to run the program
 
-#import time
-#To get system time in seconds 
 num = int(input("Seed : "))
-#Converting the real time into an integer instead of being a float number
+#Requesting the user to input whatever seed they want
      
 #Setting the values for each variable
-a = 1664525
+a = 134775813
 #A is the multiplier
-c = 1013904223  
+c = 1
 #C is the increment 
 m = 2**32
 #M is the modulus
@@ -37,7 +35,7 @@ def lcg(num):
 values= ""
 #Stores the output number as a string 
 
-for i in range(1,20):   
+for i in range(1,35):   
 #For loop to print out the list of numbers  
     values += str(lcg(num))+ " "
 #Storing the number printed as a string and making the results on one line   
